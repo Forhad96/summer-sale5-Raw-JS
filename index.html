@@ -24,10 +24,10 @@
       }
     </style>
   </head>
-  <body onscroll="scrollBtn()" class="bg-[#F8F8F8]">
+  <body class="bg-[#F8F8F8]">
     <!-- ========= Header Start ========== -->
 
-    <header class="bg-[#F9F6E2] pb-12">
+    <header class="bg-[#F9F6E2] pb-12 mb-28">
       <div class="navbar">
         <div class="flex-1">
           <a class="btn btn-ghost normal-case text-xl text-secondary"
@@ -114,10 +114,12 @@
     <!-- ========= Header End ========== -->
 
     <!-- ========= Main Start ========== -->
-    <main class="container mx-auto flex gap-5 py-20">
+    <main class="container mx-auto flex gap-5 ">
       <section class="flex-1">
-        <!-- Kitchenware section start -->
-        <div class="">
+
+        <div class="pb-10">
+                  <!-- Kitchenware section start -->
+        <div class="md:px-10 lg:px-0">
           <h2 class="text-4xl font-semibold pb-8">Kitchenware</h2>
           <div class="grid gap-5 grid-cols-1 lg:grid-cols-3">
             <!-- card 1 -->
@@ -232,7 +234,7 @@
         </div>
 
         <!-- Sportswear section start -->
-        <div class="my-14">
+        <div class="my-14 px-10 lg:px-0">
           <h2 class="text-4xl font-semibold pb-8">Sportswear</h2>
           <div class="grid gap-5 grid-cols-1 lg:grid-cols-3">
             <!-- card 1 -->
@@ -343,7 +345,7 @@
           </div>
         </div>
         <!-- Furniture section start -->
-        <div class="">
+        <div class="px-10 lg:px-0">
           <h2 class="text-4xl font-semibold pb-8">Kitchenware</h2>
           <div class="grid gap-5 grid-cols-1 lg:grid-cols-3">
             <!-- card 1 -->
@@ -453,10 +455,11 @@
             </div>
           </div>
         </div>
+        </div>
       </section>
       <!-- Make purchase coupon -->
       <aside
-        class="space-y-4 mt-[70px] hidden md:block fixed top-24 left-10 right-10 bottom-0 md:static"
+        class="space-y-4 mt-[70px] hidden md:block fixed -top-0 left-10 right-10 bottom-0 md:sticky h-screen md:top-0 md:bottom-0"
         id="aside-container">
         <div class="bg-white rounded-lg p-5">
           <h3 class="mb-4 text-2xl font-medium">Have coupon?</h3>
@@ -480,7 +483,9 @@
         </div>
         <div class="bg-white rounded-lg p-5">
           <!-- product list -->
-          <ol id="order-list"></ol>
+          <ol
+            id="order-list"
+            class="max-h-32 lg:max-h-72 overflow-x-visible scroll-smooth overflow-scroll"></ol>
           <br />
           <hr />
           <!-- total price -->
@@ -523,12 +528,12 @@
         </div>
       </aside>
       <button
-        class="fixed hidden md:hidden left-0 top-2/4 btn btn-secondary text-white rounded-tr-full rounded-br-full"
+        class="fixed hidden md:hidden -left-3 top-2/4 btn btn-secondary text-white rounded-tr-full rounded-br-full"
         id="cart-btn">
         <div class="indicator">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-10 w-10"
+            class="h-10 w-8"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor">
