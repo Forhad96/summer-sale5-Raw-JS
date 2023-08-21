@@ -19,8 +19,9 @@ function btnAddToCart(event) {
   const orderList = document.getElementById("order-list");
   const p = document.createElement("p");
   const count = orderList.childElementCount;
-  p.className = "text-xl";
-  p.innerHTML = `${count + 1}. ${itemName}`;
+  console.log(typeof count)
+  p.className = "md:text-xl font-medium";
+  p.innerHTML = `<span class="text-secondary">${count + 1}.</span> ${itemName}`;
   orderList.appendChild(p);
 
   // badge counting
@@ -68,27 +69,16 @@ function btnAddToCart(event) {
     totalPaymentAmount.innerText = "00";
     p.innerText = "";
   });
-
+// mobile screen cart btn
   cartBtn.classList.remove('hidden');
 
 }
 
-// cart button for mobile devices
+// cart button for mobile devices function
 const cartBtn = document.getElementById("cart-btn")
 cartBtn.addEventListener("click", function () {
-  // console.log('btn clicked')
   const aside = document.getElementById("aside-container");
-  // console.log(aside.classList);
-  // aside.classList.remove('hidden')
   aside.classList.toggle('hidden')
 });
 
-// scroll
-// function scrollBtn(){
-//   cartBtn.classList.remove('hidden');
 
-//   setTimeout(() =>{
-//   cartBtn.classList.add('hidden');
-
-//   },10000)
-// }
