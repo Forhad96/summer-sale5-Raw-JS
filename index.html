@@ -24,10 +24,72 @@
       }
     </style>
   </head>
-  <body class="bg-[#F8F8F8]">
+  <body onscroll="scrollBtn()" class="bg-[#F8F8F8]">
     <!-- ========= Header Start ========== -->
 
     <header class="bg-[#F9F6E2] pb-12">
+      <div class="navbar">
+        <div class="flex-1">
+          <a class="btn btn-ghost normal-case text-xl text-secondary"
+            >ALIABBA</a
+          >
+        </div>
+        <div class="flex-none">
+          <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle">
+              <div class="indicator">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="#E527B2">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                <span class="badge badge-sm indicator-item item-count">0</span>
+              </div>
+            </label>
+            <div
+              tabindex="0"
+              class="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow">
+              <div class="card-body">
+                <span class="font-bold text-lg"
+                  ><span class="item-count">0</span> Items</span
+                >
+                <span class="text-info font-medium"
+                  >Subtotal: <span id="subtotal">00</span>TK</span
+                >
+                <div class="card-actions">
+                  <button class="btn btn-secondary btn-block">View cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+              <div class="w-10 rounded-full">
+                <img src="./images/congo.png" />
+              </div>
+            </label>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li>
+                <a class="justify-between">
+                  Profile
+                  <span class="badge">New</span>
+                </a>
+              </li>
+              <li><a>Settings</a></li>
+              <li><a>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <section
         class="container mx-auto flex items-center justify-between flex-col-reverse lg:flex-row lg:flex-nowrap">
         <!-- banner content -->
@@ -61,9 +123,12 @@
             <!-- card 1 -->
             <div
               onclick="btnAddToCart(this)"
-              class="card glass md:p-6 text-center">
+              class="card glass md:p-6 text-center scale-100 hover:scale-105 ease-in duration-500">
               <figure class="bg-gray-300 py-4 md:py-8">
-                <img src="./images/prod1.png" alt="car!" />
+                <img
+                  class="scale-100 hover:scale-125 ease-in duration-500"
+                  src="./images/prod1.png"
+                  alt="car!" />
               </figure>
               <div class="rating rating-md self-center mt-8">
                 <input
@@ -165,9 +230,234 @@
             </div>
           </div>
         </div>
+
+        <!-- Sportswear section start -->
+        <div class="my-14">
+          <h2 class="text-4xl font-semibold pb-8">Sportswear</h2>
+          <div class="grid gap-5 grid-cols-1 lg:grid-cols-3">
+            <!-- card 1 -->
+            <div
+              onclick="btnAddToCart(this)"
+              class="card glass md:p-6 text-center">
+              <figure class="bg-gray-300 py-4 md:py-8">
+                <img src="./images/prod4.png" alt="Sports Back Cap!" />
+              </figure>
+              <div class="rating rating-md self-center mt-8">
+                <input
+                  type="radio"
+                  name="sportswear-1"
+                  class="mask mask-star-2 bg-orange-400" />
+                <input
+                  type="radio"
+                  name="sportswear-1"
+                  class="mask mask-star-2 bg-orange-400" />
+                <input
+                  type="radio"
+                  name="sportswear-1"
+                  class="mask mask-star-2 bg-orange-400"
+                  checked />
+                <input
+                  type="radio"
+                  name="sportswear-1"
+                  class="mask mask-star-2 bg-orange-400" />
+                <input
+                  type="radio"
+                  name="sportswear-1"
+                  class="mask mask-star-2 bg-orange-400" />
+              </div>
+              <h2 class="my-2 text-xl font-semibold">Sports Back Cap</h2>
+              <p class="text-xl text-gray-400 font-normal">
+                <span>49</span>.00 TK
+              </p>
+            </div>
+            <!-- card 2 -->
+            <div
+              onclick="btnAddToCart(this)"
+              class="card glass md:p-6 text-center">
+              <figure class="bg-gray-300 py-4 md:py-8">
+                <img src="./images/prod5.png" alt="car!" />
+              </figure>
+              <div class="rating rating-md self-center mt-8">
+                <input
+                  type="radio"
+                  name="sportswear-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  checked />
+                <input
+                  type="radio"
+                  name="sportswear-2"
+                  class="mask mask-star-2 bg-orange-400" />
+                <input
+                  type="radio"
+                  name="sportswear-2"
+                  class="mask mask-star-2 bg-orange-400" />
+                <input
+                  type="radio"
+                  name="sportswear-2"
+                  class="mask mask-star-2 bg-orange-400" />
+                <input
+                  type="radio"
+                  name="sportswear-2"
+                  class="mask mask-star-2 bg-orange-400" />
+              </div>
+              <h2 class="my-2 text-xl font-semibold">Full Jersey Set</h2>
+              <p class="text-xl text-gray-400 font-normal">
+                <span>69</span>.00 TK
+              </p>
+            </div>
+            <!-- card 3 -->
+            <div
+              onclick="btnAddToCart(this)"
+              class="card glass md:p-6 text-center">
+              <figure class="bg-gray-300 py-4 md:py-8">
+                <img src="./images/prod6.png" alt="Sports cates" />
+              </figure>
+              <div class="rating rating-md self-center mt-8">
+                <input
+                  type="radio"
+                  name="Sportswear-3"
+                  class="mask mask-star-2 bg-orange-400" />
+                <input
+                  type="radio"
+                  name="Sportswear-3"
+                  class="mask mask-star-2 bg-orange-400" />
+                <input
+                  type="radio"
+                  name="Sportswear-3"
+                  class="mask mask-star-2 bg-orange-400" />
+                <input
+                  type="radio"
+                  name="Sportswear-3"
+                  class="mask mask-star-2 bg-orange-400"
+                  checked />
+                <input
+                  type="radio"
+                  name="Sportswear-3"
+                  class="mask mask-star-2 bg-orange-400" />
+              </div>
+              <h2 class="my-2 text-xl font-semibold">Sports cates</h2>
+              <p class="text-xl text-gray-400 font-normal">
+                <span>49</span>.00 TK
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Furniture section start -->
+        <div class="">
+          <h2 class="text-4xl font-semibold pb-8">Kitchenware</h2>
+          <div class="grid gap-5 grid-cols-1 lg:grid-cols-3">
+            <!-- card 1 -->
+            <div
+              onclick="btnAddToCart(this)"
+              class="card glass md:p-6 text-center">
+              <figure class="bg-gray-300 py-4 md:py-8">
+                <img src="./images/prod7.png" alt="car!" />
+              </figure>
+              <div class="rating rating-md self-center mt-8">
+                <input
+                  type="radio"
+                  name="Furniture-1"
+                  class="mask mask-star-2 bg-orange-400" />
+                <input
+                  type="radio"
+                  name="Furniture-1"
+                  class="mask mask-star-2 bg-orange-400" />
+                <input
+                  type="radio"
+                  name="Furniture-1"
+                  class="mask mask-star-2 bg-orange-400"
+                  checked />
+                <input
+                  type="radio"
+                  name="Furniture-1"
+                  class="mask mask-star-2 bg-orange-400" />
+                <input
+                  type="radio"
+                  name="Furniture-1"
+                  class="mask mask-star-2 bg-orange-400" />
+              </div>
+              <h2 class="my-2 text-xl font-semibold">Single Relax Chair</h2>
+              <p class="text-xl text-gray-400 font-normal">
+                <span>185</span>.00 TK
+              </p>
+            </div>
+            <!-- card 2 -->
+            <div
+              onclick="btnAddToCart(this)"
+              class="card glass md:p-6 text-center">
+              <figure class="bg-gray-300 py-4 md:py-8">
+                <img src="./images/prod8.png" alt="Children play" />
+              </figure>
+              <div class="rating rating-md self-center mt-8">
+                <input
+                  type="radio"
+                  name="Furniture-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  checked />
+                <input
+                  type="radio"
+                  name="Furniture-2"
+                  class="mask mask-star-2 bg-orange-400" />
+                <input
+                  type="radio"
+                  name="Furniture-2"
+                  class="mask mask-star-2 bg-orange-400" />
+                <input
+                  type="radio"
+                  name="Furniture-2"
+                  class="mask mask-star-2 bg-orange-400" />
+                <input
+                  type="radio"
+                  name="Furniture-2"
+                  class="mask mask-star-2 bg-orange-400" />
+              </div>
+              <h2 class="my-2 text-xl font-semibold">Children play</h2>
+              <p class="text-xl text-gray-400 font-normal">
+                <span>299</span>.00 TK
+              </p>
+            </div>
+            <!-- card 3 -->
+            <div
+              onclick="btnAddToCart(this)"
+              class="card glass md:p-6 text-center">
+              <figure class="bg-gray-300 py-4 md:py-8">
+                <img src="./images/prod9.png" alt="car!" />
+              </figure>
+              <div class="rating rating-md self-center mt-8">
+                <input
+                  type="radio"
+                  name="Furniture-3"
+                  class="mask mask-star-2 bg-orange-400" />
+                <input
+                  type="radio"
+                  name="Furniture-3"
+                  class="mask mask-star-2 bg-orange-400" />
+                <input
+                  type="radio"
+                  name="Furniture-3"
+                  class="mask mask-star-2 bg-orange-400" />
+                <input
+                  type="radio"
+                  name="Furniture-3"
+                  class="mask mask-star-2 bg-orange-400"
+                  checked />
+                <input
+                  type="radio"
+                  name="Furniture-3"
+                  class="mask mask-star-2 bg-orange-400" />
+              </div>
+              <h2 class="my-2 text-xl font-semibold">Flexible Sofa</h2>
+              <p class="text-xl text-gray-400 font-normal">
+                <span>399</span>.00 TK
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
       <!-- Make purchase coupon -->
-      <aside class="space-y-4 mt-[70px]">
+      <aside
+        class="space-y-4 mt-[70px] hidden md:block fixed top-24 left-10 right-10 bottom-0 md:static"
+        id="aside-container">
         <div class="bg-white rounded-lg p-5">
           <h3 class="mb-4 text-2xl font-medium">Have coupon?</h3>
           <label class="input-group input-group-md">
@@ -178,14 +468,14 @@
               class="input input-bordered input-md" />
             <span
               id="coupon-apply"
-              class="btn bg-[#E527B2] text-white hover:bg-pink-600"
+              class="btn bg-secondary text-white hover:bg-pink-600"
               disabled
               >Apply</span
             >
           </label>
           <p id="coupon-text" class="mt-2 font-normal">
             Minimum spend 200 or above to get <br />
-            <span class="text-[#E527B2]">20% off</span>
+            <span class="text-secondary">20% off</span>
           </p>
         </div>
         <div class="bg-white rounded-lg p-5">
@@ -195,15 +485,15 @@
           <hr />
           <!-- total price -->
           <div class="py-2">
-            <p class="text-2xl">
+            <p class="text-2xl font-medium">
               Total price: <span id="total-price" class="text-gray-400">00</span
               ><span class="text-gray-400">TK</span>
             </p>
-            <p class="text-2xl">
+            <p class="text-2xl font-medium">
               Discount: <span id="discount" class="text-gray-400">00</span
               ><span class="text-gray-400">TK</span>
             </p>
-            <p class="text-2xl">
+            <p class="text-2xl font-medium">
               Total: <span id="total" class="text-gray-400">00</span
               ><span class="text-gray-400">TK</span>
             </p>
@@ -214,7 +504,7 @@
           <button
             onclick="my_modal_4.showModal()"
             id="purchase-btn"
-            class="btn bg-[#E527B2] text-white w-full mt-6 hover:bg-pink-600"
+            class="btn btn-secondary text-white w-full mt-6"
             disabled>
             Make Purchase <span id="btn-total"></span>
           </button>
@@ -224,12 +514,33 @@
                 <img src="./images/congo.png" alt="" />
                 <h3 class="font-bold text-lg">Congratulations</h3>
                 <p class="py-4">Your Purchase the product</p>
-                <button id="modal-btn" class="btn bg-[#E527B2] text-white">Go Home</button>
+                <button id="modal-btn" class="btn btn-secondary text-white">
+                  Go Home
+                </button>
               </div>
             </form>
           </dialog>
         </div>
       </aside>
+      <button
+        class="fixed hidden md:hidden left-0 top-2/4 btn btn-secondary text-white rounded-tr-full rounded-br-full"
+        id="cart-btn">
+        <div class="indicator">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-10 w-10"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+          <span class="badge badge-sm indicator-item item-count">8</span>
+        </div>
+      </button>
 
       <!-- Kitchenware section end -->
     </main>
